@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en-IN">
+<html style="font-size: 16px;" lang="en-IN" class="scroll-smooth">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -8,6 +8,7 @@
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>The Presentation</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link href="../dist/output.css" rel="stylesheet">
 <link rel="stylesheet" href="The-Presentation.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -38,7 +39,18 @@
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
+
+  <script>
+    function setHalfVolume() {
+    var myAudio = document.getElementById("audio1");  
+    myAudio.volume = 0.03; //Changed this to 0.5 or 50% volume since the function is called Set Half Volume ;)
+}
+  </script>
+
   <body class="u-body"><header class="u-clearfix u-gradient u-header u-header" id="sec-ab34"><div class="u-clearfix u-sheet u-sheet-1">
+    <audio id= "audio1" autoplay loop canplay onloadeddata="setHalfVolume()">
+      <source src="assets/audio/MenuMusic01.mp3"  type="audio/mp3">
+    </audio>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
@@ -49,7 +61,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-4-dark-1 u-text-hover-palette-4-light-1 u-text-white" href="/" style="padding: 10px 20px;">Home</a>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-4-dark-1 u-text-hover-palette-4-light-1 u-text-white" href="/home" style="padding: 10px 20px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-4-dark-1 u-text-hover-palette-4-light-1 u-text-white" href="/preset" style="padding: 10px 20px;">The Presentation</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-4-dark-1 u-text-hover-palette-4-light-1 u-text-white" href="/about" style="padding: 10px 20px;">About</a>
 </li></ul>
@@ -58,7 +70,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/" style="padding: 10px 20px;">Home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/home" style="padding: 10px 20px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/preset" style="padding: 10px 20px;">The Presentation</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/about" style="padding: 10px 20px;">About</a>
 </li></ul>
@@ -179,8 +191,10 @@ the form of the Schrodinger equation.
             <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="https://www.youtube.com/embed/cTodS8hkSDg" data-autoplay="1" frameborder="0" allowfullscreen=""></iframe>
             
           </div> -->
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cTodS8hkSDg">
-          </iframe>
+
+          <video width="100%" height="100%" src="assets/video/vid2.mp4" controls>
+            <!-- https://www.youtube.com/watch?v=K64Tv2mK5h4   https://www.youtube.com/embed/cTodS8hkSDg-->
+          </video>
         </div>
       </div>
     </section>
@@ -190,7 +204,7 @@ the form of the Schrodinger equation.
         <p class="u-text u-text-2"> Socks come in pairs. If you put a sock on your left foot, the other sock of the pair instantly becomes the “right sock,” no matter where it is located in the universe.</p>
       </div>
     </section>
-    <section class="skrollable u-align-center u-border-2 u-border-grey-75 u-clearfix u-image u-shading u-section-5" id="carousel_2df3" data-image-width="4000" data-image-height="2891">
+    <section class="u-parallaxu-section-7skrollable u-align-center u-border-2 u-border-grey-75 u-clearfix u-image u-shading u-section-5" id="carousel_2df3" data-image-width="4000" data-image-height="2891">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-1" data-animation-name="slideIn" data-animation-duration="1500" data-animation-direction="Up">So can it break the speed of light?</h2>
         <p class="u-text u-text-default-lg u-text-default-xl u-text-2" data-animation-name="slideIn" data-animation-duration="1500" data-animation-direction="Up"> Nothing Does, except tachyons. ... Some scientists say they are faster while tunneling and some disagree with this. If you 
@@ -241,7 +255,7 @@ Planck constant. For instance, position and momentum. If the momentum is
  exactly zero, the position is totally unknown. For this reason, quantum
  particles resemble a probability cloud rather than a point particle. If
  part of the cloud passes past the barrier, the particle can tunnel 
-through the barrier. This process is called quantum tunneling.<a href="https://nicepage.com/website-templates" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" target="_blank"> Quantum teleportation</a> is a different phenomenon all together. Every quantum particle contains
+through the barrier. This process is called quantum tunneling.<a href="" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1" target="_blank"> Quantum teleportation</a> is a different phenomenon all together. Every quantum particle contains
  a quantum state. Quantum teleportation means transferring the quantum 
 state of one particle to another particle<a class="KlcoI Link___StyledBox-t2xg9c-0 q-box qu-cursor--pointer qu-hover--textDecoration--underline u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" title="en.m.wikipedia.org" href="https://en.m.wikipedia.org/wiki/Quantum_teleportation" target="_blank" rel="noopener nofollow"></a>by
  means of classical communication, for instance using a photon. That 
@@ -259,7 +273,7 @@ light or to transmit information faster than light.
         <p class="u-text u-text-2"> The officer walked up to the car and said, "do you know how fast you were going?" To which the electron responded "no, but I know where I am!"</p>
       </div>
     </section>
-    <section class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-clearfix u-image u-shading u-section-9" id="sec-c321" data-image-width="3424" data-image-height="3437">
+    <section class="skrollable u-align-center u-clearfix u-image u-parallax u-shading u-section-7 u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-clearfix u-image u-shading u-section-9" id="sec-c321" data-image-width="3424" data-image-height="3437">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-custom-font u-text u-text-palette-1-base u-text-1" data-animation-name="slideIn" data-animation-duration="1250" data-animation-direction="Up">So how tunneling is important in tech-application</h2>
         <div class="u-expanded-width u-list u-list-1">
@@ -492,7 +506,7 @@ questions in both fields.</p>
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-6d4e"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1"> © Copyright 2021 <b>
-            <a href="https://archi221aritra221.github.io/BlastexWeb/site_update_v2021.2.0.abcdenf4a1/about&amp;contacts.html" class="footer_mail u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Blasteoroid Corporation.</a></b> All Rights Reserved. Created by <a href="https://www.github.com/ArchismanKarmakar/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Archisman Karmakar.</a>
+            <a href="https://archi221aritra221.github.io/BlastexWeb/site_update_v2021.2.0.abcdenf4a1/about&amp;contacts.html" class="footer_mail u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Blasteoroid Corporation.</a></b> All Rights Reserved. Designed, developed & created by <a href="https://www.github.com/ArchismanKarmakar/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Archisman Karmakar</a> using React, Express, NodeJS, Tailwind CSS.
         </p>
       </div></footer>
   </body>

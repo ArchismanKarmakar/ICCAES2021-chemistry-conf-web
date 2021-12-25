@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en-IN">
+<html style="font-size: 16px;" lang="en-IN" class="scroll-smooth">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -8,6 +8,7 @@
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Home</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link href="../dist/output.css" rel="stylesheet">
 <link rel="stylesheet" href="Home.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -21,12 +22,49 @@
 		"@type": "Organization",
 		"name": "MyReactApp"
 }</script>
+
+<style>
+  .typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /* letter-spacing: .05em; Adjust as needed */
+  animation: 
+    typing 2s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+</style>
+
+<script>
+  function setHalfVolume() {
+  var myAudio = document.getElementById("audio1");  
+  myAudio.volume = 0.04; //Changed this to 0.5 or 50% volume since the function is called Set Half Volume ;)
+}
+</script>
+
+
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Home">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
-  <body class="u-body"><header class="u-clearfix u-gradient u-header u-header" id="sec-ab34"><div class="u-clearfix u-sheet u-sheet-1">
+  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body"><header class="u-clearfix u-gradient u-header u-header" id="sec-ab34"><div class="u-clearfix u-sheet u-sheet-1">
+    <audio id= "audio1" autoplay loop canplay onloadeddata="setHalfVolume()">
+      <source src="assets/audio/MenuMusic02.mp3"  type="audio/mp3">
+    </audio>
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
@@ -37,7 +75,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-4-dark-1 u-text-hover-palette-4-light-1 u-text-white" href="/" style="padding: 10px 20px;">Home</a>
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-4-dark-1 u-text-hover-palette-4-light-1 u-text-white" href="/home" style="padding: 10px 20px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-4-dark-1 u-text-hover-palette-4-light-1 u-text-white" href="/preset" style="padding: 10px 20px;">The Presentation</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-4-dark-1 u-text-hover-palette-4-light-1 u-text-white" href="/about" style="padding: 10px 20px;">About</a>
 </li></ul>
@@ -46,7 +84,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/" style="padding: 10px 20px;">Home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/home" style="padding: 10px 20px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/preset" style="padding: 10px 20px;">The Presentation</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/about" style="padding: 10px 20px;">About</a>
 </li></ul>
@@ -56,7 +94,7 @@
           </div>
         </nav>
       </div></header>
-    <section class="u-carousel u-slide u-block-63ea-1" id="carousel_a34b" src="" data-image-width="1980" data-image-height="1114" data-interval="5000" data-u-ride="carousel">
+    <section class="u-carousel u-slide u-block-63ea-1" id="carousel_a34b" src="" data-image-width="1980" data-image-height="1114" data-interval="50000" data-u-ride="carousel">
       <ol class="u-absolute-hcenter u-carousel-indicators u-block-63ea-2">
         <li data-u-target="#carousel_a34b" data-u-slide-to="0" class="u-active u-grey-30"></li>
         <li data-u-target="#carousel_a34b" class="u-grey-30" data-u-slide-to="1"></li>
@@ -64,8 +102,8 @@
       </ol>
       <div class="u-carousel-inner" role="listbox">
         <div class="u-active u-align-center u-carousel-item u-clearfix u-image u-shading u-section-1-1" src="" data-image-width="1980" data-image-height="1114">
-          <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-            <h1 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-title u-text-1">Welcome to the world of Quantum Technology</h1>
+          <div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1 typewriter">
+            <h1 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-title u-text-1">Welcome</h1><h1 class="u-custom-font u-font-montserrat u-text u-title">to the world of</h1><h1 class="u-custom-font u-font-montserrat u-text u-title">Quantum Technology</h1>
             <p class="u-large-text u-text u-text-body-alt-color u-text-font u-text-variant u-text-2">
               <a href="/about" data-page-id="2931509868" class="u-active-none u-border-0 u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">about us</a> | <a href="/preset" data-page-id="78489061" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-2">present to the world</a> | <a href="" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-3">reviews</a> | <a href="" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-4">articles</a> | <a href="" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-5">#future</a>
             </p>
@@ -80,10 +118,13 @@
             <a href="/preset" data-page-id="78489061" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-radius-50 u-btn-1">LEARN MORE</a>
           </div>
         </div>
-        <div class="u-align-center u-carousel-item u-clearfix u-image u-shading u-section-1-3" src="" data-image-width="1920" data-image-height="1080">
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-shading u-section-1-3" src="">
           <div class="u-clearfix u-sheet u-sheet-1">
-            <h1 class="u-text u-title u-text-1">Quantum powers the modern era tech. Want to know how?</h1>
-            <a href="/preset" data-page-id="78489061" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-radius-50 u-btn-1">LEARN MORE</a>
+            <video width="1280px" height="720px" src="assets/video/vid1.mp4" controls>
+              <!-- https://www.youtube.com/watch?v=K64Tv2mK5h4   https://www.youtube.com/embed/cTodS8hkSDg-->
+            </video>
+            <!-- <h1 class="u-text u-title u-text-1">Quantum powers the modern era tech. Want to know how?</h1> -->
+            <!-- <a href="/preset" data-page-id="78489061" class="u-border-2 u-border-white u-btn u-btn-round u-button-style u-radius-50 u-btn-1">LEARN MORE</a> -->
           </div>
         </div>
       </div>
@@ -106,7 +147,7 @@
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-6d4e"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1"> © Copyright 2021 <b>
-            <a href="https://archi221aritra221.github.io/BlastexWeb/site_update_v2021.2.0.abcdenf4a1/about&amp;contacts.html" class="footer_mail u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Blasteoroid Corporation.</a></b> All Rights Reserved. Created by <a href="https://www.github.com/ArchismanKarmakar/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Archisman Karmakar.</a>
+            <a href="https://archi221aritra221.github.io/BlastexWeb/site_update_v2021.2.0.abcdenf4a1/about&amp;contacts.html" class="footer_mail u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Blasteoroid Corporation.</a></b> All Rights Reserved. Designed, developed & created by <a href="https://www.github.com/ArchismanKarmakar/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Archisman Karmakar</a> using React, Express, NodeJS, Tailwind CSS.
         </p>
       </div></footer>
   </body>

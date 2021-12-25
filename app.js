@@ -10,6 +10,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "/src/"))); //THIS ALLOWS TO SEND THE FULL DIRECTORY SO ALL FILES CAN LOAD WITHOUT ERROR  //SERVING STATIC FILES
 // app.use(express.static("public"));
+app.use(express.static((__dirname)));
 
 
 //ENDPOINTS
@@ -18,7 +19,15 @@ app.get('/', (req,res)=>{
 
 
     // res.sendFile(path.join(__dirname,'index.html'));  //CAN ALSO USE THIS
-    res.sendFile(path.join(__dirname,"/src/index.html"));
+    res.sendFile("/src/home.html");
+});
+
+app.get('/start', (req,res)=>{
+    // res.sendFile((__dirname));
+
+
+    // res.sendFile(path.join(__dirname,'index.html'));  //CAN ALSO USE THIS
+    res.sendFile(path.join(__dirname,"/src/start.html"));
 });
 
 app.get('/preset', (req,res)=>{
@@ -31,7 +40,7 @@ app.get('/about', (req,res)=>{
      res.sendFile(path.join(__dirname,'/src/About.html'));
  });
 
-app.listen(port, ()=>{
+app.listen((process.env.PORT || port), ()=>{
     console.log(`the server is listening at port ${port}`);
 
 });
